@@ -1,0 +1,35 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/120440358/kERaVcJu3ixsY3VUkbwyE6",
+    "access_key_id": "ASIAZV3A2ECZFC6I4XAD",
+    "secret_access_key": "FqTWpT4ZIivCVYGxJ69zs0hg3CSN3gRa52I737lp",
+    "session_token": "IQoJb3JpZ2luX2VjEJr//////////wEaCXVzLWVhc3QtMSJGMEQCIGs4q4DBQR9pxF1/QLDhchY0oH8u4Emf0nOosUbZrPwfAiAo5phwWe7557YipST3i0pqd1ZoQiqK7AdIHvWoZGvR+SrkAwhiEAQaDDY2NTM4NjA5ODg2NiIM0VKraxIkdaG0suGUKsEDXP6LeXgUOm/2AD2IgGIgHp4iKXU5doJe9hPd4DcghANEgA+DpR57QpxHydSOKlml+xvgKrdkkmRjAWQYaNco1QtOdQfzqHYeCg1yCuADZburq7AiY1ajsgRehZfMsn+3RKuJQPl5J3fm1JOqDT2wZJ6g8g3HZv2ZYPcuWZ1Hprpsq/vnYnLOAhXZ876gxIRQkt/5EBRbCGnQTjR7aDzymGFEGPlzjFb12tz0BLfsQACk6gbTs6e4GeoRQ+OXCLN4tKzR28hhZOs4pxxrKgYXMjHvYlDcHn8/ow+L3+T/D7uQKJP7kN3pKJ9xbfsLFdKcQeUvjd3ZE/8MQz3xC2N43M+HqgoRnjawZNAMZ5VYKFKp5r4tdH1b15LvoHJk2SJrRJHe/Q/zrpwTyd3ycBcnpOxi2zqr36lueb78ojYpN4ueGWem1Ykp2+lWWAQ+xvZXSrhVZE1pbNlbe5UrS48Mrb7ifEfl3INPuxXz4tY/hBGRJuyN+vlpA3Pluws0fAE8jdOKSED/LNLJWAitwo2NgU173bj5TmpZWsVkjg7qNHlqk6k1o0RwWAACCFgCfYFRbQcmfD3Ri3BC+yslKmyvNWUw7YeY0AY6ngGusu0k5UTDQHOjoBfyHRG6PFafhtVF3xiTVXxJyDqUtF9fVHZNwOD4MHI8tm4ZIXz4AFvx0cKnBciigQwb9Yjp4b+JOuu2HCJgTrqy906FMh8cAIeAN85QyfyMe2eBhQNbZif2N2UYADe9r+UyyLtkI0CT2//gJ6m65C7ZlWk38EVNWqa8xvhhTXrec41TErq7kCTWF8jsGT+F+vKb/w==",
+    "expiration": "2026-05-15T05:18:37.000Z"
+  },
+  "name": "prime-nest-upgrade",
+  "path": "/home/ubuntu/prime-nest-upgrade",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "PULrokAoHo6Af4YaMJvEby",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "6dx7vLJRJbFedpMBsAuCPD",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Shoeab Khan",
+    "OWNER_OPEN_ID": "N5LeLKfWkEjk6f9NzFprYh",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "bf8f00e8-98cc-4f52-b7a4-9214a8db8e60",
+    "VITE_APP_ID": "kERaVcJu3ixsY3VUkbwyE6",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Prime Nest Interiors - Premium Interior Designers in Hyderabad",
+    "VITE_FRONTEND_FORGE_API_KEY": "eBswzjvXQhRH3kA59FPP59",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
