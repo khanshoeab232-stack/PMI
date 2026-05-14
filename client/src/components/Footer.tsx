@@ -52,22 +52,22 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/">
-                  <span className="hover:text-gold transition-colors cursor-pointer">Home</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">Home</span>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <span className="hover:text-gold transition-colors cursor-pointer">About</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">About</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <span className="hover:text-gold transition-colors cursor-pointer">Services</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">Services</span>
                 </Link>
               </li>
               <li>
                 <Link href="/projects">
-                  <span className="hover:text-gold transition-colors cursor-pointer">Projects</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">Projects</span>
                 </Link>
               </li>
             </ul>
@@ -79,22 +79,22 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/modular-kitchens">
-                  <span className="hover:text-gold transition-colors cursor-pointer">Modular Kitchens</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">Modular Kitchens</span>
                 </Link>
               </li>
               <li>
                 <Link href="/wardrobes">
-                  <span className="hover:text-gold transition-colors cursor-pointer">Wardrobes</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">Wardrobes</span>
                 </Link>
               </li>
               <li>
                 <Link href="/tv-units">
-                  <span className="hover:text-gold transition-colors cursor-pointer">TV Units</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">TV Units</span>
                 </Link>
               </li>
               <li>
                 <Link href="/services">
-                  <span className="hover:text-gold transition-colors cursor-pointer">All Services</span>
+                  <span className="hover:text-yellow-500 transition-colors cursor-pointer">All Services</span>
                 </Link>
               </li>
             </ul>
@@ -105,19 +105,19 @@ export default function Footer() {
             <h4 className="font-semibold text-white">Contact</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
-                <a href="tel:+919542663490" className="hover:text-gold transition-colors">
+                <Phone className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
+                <a href="tel:+919542663490" className="hover:text-yellow-500 transition-colors">
                   +91 9542 663 490
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
-                <a href="mailto:info@primenestinteriors.com" className="hover:text-gold transition-colors">
+                <Mail className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
+                <a href="mailto:info@primenestinteriors.com" className="hover:text-yellow-500 transition-colors">
                   info@primenestinteriors.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
                 <span>Hyderabad, India</span>
               </li>
             </ul>
@@ -135,7 +135,7 @@ export default function Footer() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gold transition-colors"
+                className="text-gray-400 hover:text-yellow-500 transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
@@ -143,7 +143,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gold transition-colors"
+                className="text-gray-400 hover:text-yellow-500 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -151,7 +151,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-gold transition-colors"
+                className="text-gray-400 hover:text-yellow-500 transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>

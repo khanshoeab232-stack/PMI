@@ -73,7 +73,7 @@ export default function Projects() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-slate-900 to-slate-800">
+      <section className="py-16 md:py-24 bg-light-gray">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,8 +81,8 @@ export default function Projects() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="heading-xl text-white mb-4">Our Premium Projects</h1>
-            <p className="body-lg text-gray-300">
+            <h1 className="heading-xl mb-4">Our Premium Projects</h1>
+            <p className="body-lg">
               Explore our portfolio of beautifully designed interiors across Hyderabad. Each project showcases our commitment to quality, innovation, and customer satisfaction.
             </p>
           </motion.div>

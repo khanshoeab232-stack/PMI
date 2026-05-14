@@ -7,120 +7,48 @@ export default function Services() {
     {
       id: 1,
       title: 'Modular Kitchens',
-      description: 'Premium kitchen designs with smart storage solutions, marble or quartz countertops, integrated appliances, and professional installation.',
-      features: ['Soft-close mechanisms', 'LED lighting', 'Smart storage', 'Premium finishes', 'Integrated appliances'],
+      description: 'Premium modular kitchens with smart storage, modern appliances, and elegant finishes. Designed for functionality and style.',
+      features: ['Custom cabinetry', 'Premium appliances', 'Smart storage solutions', 'Marble countertops', 'Soft-close drawers'],
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-hero-fVA6XDjV888HcQWG6MKm4e.webp',
       href: '/modular-kitchens'
     },
     {
       id: 2,
       title: 'Wardrobes',
-      description: 'Custom wardrobe solutions designed for maximum organization and elegant aesthetics. Perfect for bedrooms of all sizes.',
-      features: ['Customizable layouts', 'Soft-close doors', 'Interior lighting', 'Multiple finishes', 'Space optimization'],
+      description: 'Custom wardrobe designs with elegant finishes, optimal organization, and premium hardware. Perfect for any bedroom.',
+      features: ['Custom designs', 'Mirror panels', 'Soft lighting', 'Organized storage', 'Premium hardware'],
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-hero-SszToUGjbHzLbhyFFZkXZc.webp',
       href: '/wardrobes'
     },
     {
       id: 3,
       title: 'TV Units',
-      description: 'Entertainment walls that blend functionality with premium design. Create a stunning focal point for your living room.',
-      features: ['Cable management', 'Floating designs', 'Storage integration', 'Modern aesthetics', 'Custom dimensions'],
+      description: 'Sophisticated entertainment walls with integrated storage, ambient lighting, and minimalist design.',
+      features: ['Wall-mounted design', 'Integrated storage', 'Ambient lighting', 'Cable management', 'Modern aesthetics'],
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/tv-unit-hero-k4TQq6BN327dQWVJAMdthY.webp',
       href: '/tv-units'
     },
     {
       id: 4,
-      title: 'Bedroom Design',
-      description: 'Luxurious bedroom interiors for ultimate comfort and style. Your personal sanctuary designed perfectly.',
-      features: ['Comfort-focused', 'Aesthetic appeal', 'Storage solutions', 'Lighting ambiance', 'Personalization'],
+      title: 'Bedroom Interiors',
+      description: 'Luxurious bedroom designs creating serene and comfortable spaces with premium furnishings and lighting.',
+      features: ['Custom bed designs', 'Ambient lighting', 'Premium finishes', 'Storage solutions', 'Relaxing aesthetics'],
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-hero-SszToUGjbHzLbhyFFZkXZc.webp',
       href: '/services'
     },
     {
       id: 5,
-      title: 'Living Room Design',
-      description: 'Sophisticated living spaces that reflect your lifestyle. From minimalist to luxurious, we create spaces that impress.',
-      features: ['Space planning', 'Color coordination', 'Furniture selection', 'Lighting design', 'Ambient creation'],
+      title: 'Living Room Interiors',
+      description: 'Elegant living spaces designed for modern family living with comfortable seating and entertainment areas.',
+      features: ['Custom furniture', 'Accent walls', 'Lighting design', 'Storage integration', 'Entertainment zones'],
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
       href: '/services'
     },
     {
       id: 6,
-      title: 'Pooja Room Design',
-      description: 'Sacred spaces designed with spiritual elegance. Create a peaceful sanctuary for prayer and meditation.',
-      features: ['Spiritual aesthetics', 'Traditional elements', 'Modern finishes', 'Lighting effects', 'Custom designs'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 7,
-      title: 'Dining Hall',
-      description: 'Elegant dining spaces perfect for memorable gatherings. Designs that combine functionality with sophistication.',
-      features: ['Table selection', 'Storage solutions', 'Lighting design', 'Wall treatments', 'Space optimization'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 8,
-      title: 'Foyer & False Ceiling',
-      description: 'Stunning entryways and ceiling designs that make a lasting first impression. Create architectural interest.',
-      features: ['Architectural designs', 'LED integration', 'Material variety', 'Custom patterns', 'Premium finishes'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 9,
-      title: 'Bathroom Design',
-      description: 'Spa-like bathrooms with premium fixtures and elegant finishes. Transform your daily routine into a luxury experience.',
-      features: ['Premium fixtures', 'Waterproofing', 'Ventilation', 'Lighting design', 'Storage solutions'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 10,
-      title: 'Wallpaper & Paint Design',
-      description: 'Creative wall treatments and color schemes that transform spaces. Express your personality through walls.',
-      features: ['Color consultation', 'Texture options', 'Premium materials', 'Professional application', 'Durability'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 11,
-      title: 'Lighting & Furniture',
-      description: 'Ambient lighting and custom furniture solutions. Create the perfect atmosphere in every room.',
-      features: ['LED solutions', 'Custom furniture', 'Ambient lighting', 'Energy efficiency', 'Design integration'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 12,
-      title: 'Study & Staircase Design',
-      description: 'Functional study spaces and elegant staircases. Combine productivity with architectural beauty.',
-      features: ['Ergonomic design', 'Storage integration', 'Lighting solutions', 'Aesthetic appeal', 'Functionality'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 13,
-      title: 'Home Office Design',
-      description: 'Professional home office spaces designed for productivity and comfort. Perfect for remote work setup.',
-      features: ['Ergonomic setup', 'Storage solutions', 'Lighting design', 'Soundproofing', 'Aesthetic appeal'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 14,
-      title: 'Play Room Design',
-      description: 'Creative and safe play spaces for children. Designs that inspire imagination and learning.',
-      features: ['Safety standards', 'Creative design', 'Storage solutions', 'Colorful aesthetics', 'Durability'],
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
-      href: '/services'
-    },
-    {
-      id: 15,
       title: 'Full Home Interiors',
-      description: 'Complete interior design solutions for your entire apartment or villa. Comprehensive transformation from concept to completion.',
-      features: ['Complete planning', 'Coordinated design', 'Quality materials', 'Professional execution', 'Warranty coverage'],
+      description: 'Complete home transformation with cohesive design throughout all spaces. End-to-end interior solutions.',
+      features: ['Complete design', 'All rooms covered', 'Cohesive aesthetics', 'Project management', 'Quality assurance'],
       image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-main-JcaSpkBMK629bMVPxjD53z.webp',
       href: '/services'
     },

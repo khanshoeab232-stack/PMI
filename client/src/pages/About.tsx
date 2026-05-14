@@ -1,27 +1,7 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Users, Lightbulb, Target, ArrowRight } from 'lucide-react';
+import { CheckCircle, Users, Lightbulb, Target } from 'lucide-react';
 
 export default function About() {
-  const [activeTab, setActiveTab] = useState('mission');
-  const missionVisionValues = {
-    mission: {
-      title: 'Our Mission',
-      description: 'To provide top-tier home interiors in Hyderabad that not only meet the expectations of our customers, but also enrich their lifestyle with innovative, personal designs. Quality craftsmanship, careful attention to detail, and spontaneous project execution are our goals to enhance living experiences for Hyderabad and beyond.',
-      icon: Target
-    },
-    vision: {
-      title: 'Our Vision',
-      description: 'To become a leading choice for interior design, making dreams alive, one space at a time. We envision a future where premium interior design is accessible to everyone, and where every home reflects the personality and lifestyle of its inhabitants.',
-      icon: Lightbulb
-    },
-    values: {
-      title: 'Our Values',
-      description: 'We are guided by core values of excellence, customer focus, innovation, integrity, and sustainability. We believe in delivering premium quality, listening to our clients, staying updated with design trends, maintaining transparency, and creating environmentally conscious solutions.',
-      icon: Users
-    }
-  };
-
   const values = [
     {
       icon: Target,
@@ -109,8 +89,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission, Vision, Values Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-gold/10 to-gold/5">
+      {/* Values Section */}
+      <section className="py-16 md:py-24 bg-soft-gray">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,68 +99,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-accent mb-4">Our Mission, Vision & Values</h2>
-            <div className="w-16 h-1 bg-gold mx-auto"></div>
-          </motion.div>
-
-          {/* Tab Navigation */}
-          <div className="flex justify-center gap-4 mb-12">
-            {['mission', 'vision', 'values'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-                  activeTab === tab
-                    ? 'bg-gold text-white shadow-lg'
-                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-gold'
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </div>
-
-          {/* Tab Content */}
-          {Object.entries(missionVisionValues).map(([key, content]) => {
-            const Icon = content.icon;
-            return (
-              <motion.div
-                key={key}
-                initial={{ opacity: 0, y: 20 }}
-                animate={activeTab === key ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5 }}
-                className={activeTab === key ? 'block' : 'hidden'}
-              >
-                <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg border border-gold/20">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center w-20 h-20 bg-gold/10 rounded-lg">
-                        <Icon className="w-10 h-10 text-gold" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-3xl font-bold text-dark-accent mb-4">{content.title}</h3>
-                      <p className="text-lg text-gray-700 leading-relaxed">{content.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Core Values Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-accent mb-4">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-accent mb-4">Our Values</h2>
             <div className="w-16 h-1 bg-gold mx-auto"></div>
           </motion.div>
 
@@ -194,10 +113,10 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-8 rounded-lg border border-gray-200 text-center hover:shadow-lg transition-all duration-300 hover:border-gold"
+                  className="bg-white p-8 rounded-lg border border-gray-200 text-center hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gold/10 rounded-full mb-4 group-hover:bg-gold/20">
-                    <Icon className="w-8 h-8 text-gold" />
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gold rounded-full mb-4">
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-dark-accent mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
