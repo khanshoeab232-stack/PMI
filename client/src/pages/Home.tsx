@@ -1,56 +1,43 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Check, Star, Users, Award, Zap, MapPin, Briefcase } from 'lucide-react';
+import { ArrowRight, CheckCircle, Home as HomeIcon, Zap, Award, Users } from 'lucide-react';
 import { Link } from 'wouter';
-import { useState } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import PopularSearches from '@/components/PopularSearches';
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState(0);
-
   const services = [
     {
-      icon: '🍳',
+      icon: HomeIcon,
       title: 'Modular Kitchens',
-      description: 'Premium kitchen designs with modern appliances and smart storage solutions for Hyderabad apartments',
-      href: '/modular-kitchens'
+      description: 'Premium kitchen designs with smart storage and modern aesthetics',
+      link: '/modular-kitchens'
     },
     {
-      icon: '👗',
+      icon: HomeIcon,
       title: 'Wardrobes',
-      description: 'Custom wardrobe designs with elegant finishes and optimal organization for your bedroom',
-      href: '/wardrobes'
+      description: 'Custom wardrobe solutions for organized and elegant bedrooms',
+      link: '/wardrobes'
     },
     {
-      icon: '📺',
+      icon: Zap,
       title: 'TV Units',
-      description: 'Sophisticated entertainment walls with integrated storage and lighting for modern living',
-      href: '/tv-units'
+      description: 'Entertainment walls that blend functionality with premium design',
+      link: '/tv-units'
     },
     {
-      icon: '🛏️',
-      title: 'Bedroom Interiors',
-      description: 'Luxurious bedroom designs creating serene and comfortable spaces for rest and relaxation',
-      href: '/services'
-    },
-    {
-      icon: '🛋️',
-      title: 'Living Room Interiors',
-      description: 'Elegant living spaces designed for modern family living and entertaining guests',
-      href: '/services'
-    },
-    {
-      icon: '✨',
+      icon: Award,
       title: 'Full Home Interiors',
-      description: 'Complete home transformation with cohesive design throughout your apartment',
-      href: '/services'
+      description: 'Complete interior design solutions for your entire apartment',
+      link: '/services'
     },
   ];
 
   const features = [
-    { icon: Award, title: 'Premium Quality', description: 'High-end materials and expert craftsmanship' },
-    { icon: Users, title: 'Expert Team', description: 'Experienced designers and architects' },
-    { icon: Zap, title: 'Fast Delivery', description: 'Efficient project execution and timely completion' },
+    'Premium materials and finishes',
+    'Expert design consultation',
+    '3D visualization before execution',
+    'Professional installation',
+    'Warranty and after-sales support',
+    'Customized solutions for your space',
   ];
 
   const stats = [
@@ -62,120 +49,85 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: 'Rajesh Kumar',
-      role: 'Apartment Owner, 2BHK',
-      text: 'Prime Nest transformed our 2BHK into a luxurious space. The attention to detail and quality is exceptional. They understood our vision perfectly.',
-      rating: 5
-    },
-    {
       name: 'Priya Sharma',
-      role: 'Working Professional',
-      text: 'The team was professional, punctual, and delivered exactly what we envisioned. Highly recommended for anyone in Hyderabad!',
+      role: 'Apartment Owner',
+      text: 'Prime Nest transformed our apartment into a dream home. The attention to detail and professionalism was exceptional.',
       rating: 5
     },
     {
-      name: 'Arjun Patel',
+      name: 'Rajesh Kumar',
       role: 'Villa Owner',
-      text: 'Outstanding work! They understood our requirements perfectly and created a space that feels like home. Best investment ever.',
+      text: 'Excellent service from consultation to installation. The team understood our vision perfectly and delivered beyond expectations.',
       rating: 5
     },
-  ];
-
-  const processSteps = [
-    { step: '01', title: 'Consultation', description: 'Free consultation to understand your vision and requirements' },
-    { step: '02', title: 'Design', description: 'Custom design proposals tailored to your space and style' },
-    { step: '03', title: 'Planning', description: 'Detailed project planning with timeline and budget' },
-    { step: '04', title: 'Execution', description: 'Professional installation with quality assurance' },
-    { step: '05', title: 'Handover', description: 'Final inspection and project completion' },
-  ];
-
-  const trendingSearches = [
-    '2BHK Interior Designers Hyderabad',
-    '3BHK Interior Designers Hyderabad',
-    'Modern Kitchen Designs Hyderabad',
-    'Wardrobe Interior Hyderabad',
-    'TV Unit Designs Hyderabad',
-    'False Ceiling Hyderabad',
-    'Apartment Interior Designers',
-    'Luxury Home Interiors Hyderabad',
-    'Modular Furniture Hyderabad',
-    'Living Room Interiors Hyderabad',
-  ];
-
-  const faqs = [
     {
-      q: 'What is your typical project timeline?',
-      a: 'Project timelines vary based on scope. A typical 2BHK apartment takes 45-60 days. We provide detailed timelines during planning.'
-    },
-    {
-      q: 'Do you provide warranty on your work?',
-      a: 'Yes, we provide comprehensive warranty on all materials and workmanship. Details are provided in the project agreement.'
-    },
-    {
-      q: 'Can you work within my budget?',
-      a: 'Absolutely. We offer flexible solutions across all budget ranges without compromising on quality.'
-    },
-    {
-      q: 'How do I book a free consultation?',
-      a: 'You can book through WhatsApp, call us directly, or fill the contact form. We respond within 24 hours.'
-    },
-    {
-      q: 'Do you handle the entire project from design to execution?',
-      a: 'Yes, we manage everything - from initial design to final handover, ensuring seamless execution.'
-    },
-    {
-      q: 'What areas do you serve?',
-      a: 'We primarily serve Hyderabad and surrounding areas. Contact us to confirm service availability for your location.'
+      name: 'Anjali Reddy',
+      role: 'Working Professional',
+      text: 'They made the entire process hassle-free. The quality of work and timely delivery impressed us completely.',
+      rating: 5
     },
   ];
 
   return (
     <div className="bg-white">
-      <Navbar />
-
-      {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      {/* Premium Hero Section */}
+      <section className="relative h-screen md:h-[600px] min-h-[500px] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/120440358/kERaVcJu3ixsY3VUkbwyE6/hero-main-luxury-apartment-28MexhxxJV9on7ZEYQAQ8S.webp)',
+            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-premium-living-AEqYpDtXncAEA9TdeWApXx.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
-          <div className="absolute inset-0 bg-black/35"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 container text-center text-white max-w-4xl"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative z-10 container text-left max-w-2xl"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="heading-xl text-white mb-4"
+          >
             Premium Interior Designs for Modern Hyderabad Homes
-          </h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-100 leading-relaxed max-w-2xl mx-auto">
-            Prime Nest Interiors creates stunning modular kitchens, wardrobes, TV units, and complete home interiors designed for contemporary apartment living in Hyderabad.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg text-gray-100 mb-8 leading-relaxed"
+          >
+            Transform your apartment into a luxury space with our expert interior design solutions. Modular kitchens, wardrobes, TV units, and complete home interiors crafted for elegant living.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
             <a
               href="https://wa.me/919542663490?text=Hi%20Prime%20Nest%20Interiors,%20I%20would%20like%20to%20book%20a%20free%20consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 bg-gold text-white rounded-lg font-semibold hover:bg-opacity-90 hover:shadow-lg transition-all duration-200 active:scale-95 inline-flex items-center justify-center gap-2"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-white rounded-lg font-semibold hover:opacity-90 transition-all duration-200 active:scale-95"
             >
               Book Free Consultation <ArrowRight className="w-5 h-5" />
             </a>
             <Link href="/projects">
-              <a className="px-8 py-3.5 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-dark-accent transition-all duration-200 active:scale-95 inline-flex items-center justify-center gap-2">
-                View Projects <ArrowRight className="w-5 h-5" />
-              </a>
+              <span className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-dark-accent transition-all duration-200 active:scale-95 cursor-pointer">
+                View Our Projects
+              </span>
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <motion.div
@@ -185,73 +137,36 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-accent">Our Premium Services</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Comprehensive interior design solutions tailored to your lifestyle and preferences for Hyderabad homes
+            <h2 className="heading-lg mb-4">Our Premium Services</h2>
+            <div className="divider-gold mb-6"></div>
+            <p className="body-lg max-w-2xl mx-auto">
+              We specialize in creating premium interior designs for apartments, flats, and villas in Hyderabad. Each project is tailored to your unique needs and lifestyle.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="group p-6 md:p-8 bg-soft-gray rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300 cursor-pointer"
-              >
-                <Link href={service.href}>
-                  <a className="block h-full">
-                    <div className="text-4xl mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-bold text-dark-accent mb-3 group-hover:text-gold transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    <div className="flex items-center gap-2 text-gold font-semibold group-hover:gap-3 transition-all">
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </a>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 md:py-24 bg-soft-gray">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-accent">Why Choose Prime Nest</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mb-4"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => {
+              const Icon = service.icon;
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center"
+                  whileHover={{ y: -8 }}
+                  className="card-premium p-6"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gold rounded-full mb-4">
-                    <Icon className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-dark-accent mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <h3 className="heading-sm mb-3">{service.title}</h3>
+                  <p className="body-sm mb-4">{service.description}</p>
+                  <Link href={service.link}>
+                    <span className="inline-flex items-center gap-2 text-gold font-semibold hover:opacity-70 transition-opacity cursor-pointer">
+                      Learn More <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
                 </motion.div>
               );
             })}
@@ -259,10 +174,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Why Choose Us Section */}
+      <section className="py-16 md:py-24 bg-light-gray">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="heading-lg mb-4">Why Choose Prime Nest Interiors?</h2>
+            <div className="divider-gold mb-6"></div>
+            <p className="body-lg max-w-2xl mx-auto">
+              We combine expertise, quality, and innovation to create interior spaces that exceed expectations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-premium-5tiQTLo4SDZPs3T5swY5qE.webp"
+                alt="Premium modular kitchen design"
+                className="rounded-lg shadow-lg w-full h-96 object-cover"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <CheckCircle className="w-6 h-6 text-gold flex-shrink-0 mt-0.5" />
+                  <span className="body-md">{feature}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 md:py-24 bg-dark-accent text-white">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="heading-lg text-white mb-4">Our Track Record</h2>
+            <p className="body-lg text-gray-300">
+              Trusted by hundreds of families and professionals in Hyderabad
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -270,81 +247,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6"
+                className="text-center"
               >
-                <div className="text-3xl md:text-4xl font-bold text-gold mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-4xl md:text-5xl font-bold text-gold mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="py-16 md:py-24 bg-soft-gray">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-accent">Featured Projects</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Explore our latest premium interior design projects in Hyderabad
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/120440358/kERaVcJu3ixsY3VUkbwyE6/modular-kitchen-premium-YjTuPXax5WqaPVNcd5oJZo.webp', title: 'Luxury Modular Kitchen' },
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/120440358/kERaVcJu3ixsY3VUkbwyE6/wardrobe-design-luxury-DC9reer2AZYi7JnzhYgR6F.webp', title: 'Premium Bedroom Wardrobe' },
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/120440358/kERaVcJu3ixsY3VUkbwyE6/tv-unit-entertainment-JxbGeZ6uEdqrcKfMiY3FfV.webp', title: 'Modern TV Entertainment Unit' },
-            ].map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
-                className="group overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative h-64 md:h-72 overflow-hidden">
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-end">
-                    <div className="p-6 w-full">
-                      <h3 className="text-white font-bold text-lg">{project.title}</h3>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Link href="/projects">
-              <a className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-white rounded-lg font-semibold hover:bg-opacity-90 hover:shadow-lg transition-all duration-200 active:scale-95">
-                View All Projects <ArrowRight className="w-5 h-5" />
-              </a>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
+      {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <motion.div
@@ -354,10 +267,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-accent">Client Testimonials</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              What our satisfied clients in Hyderabad say about Prime Nest Interiors
+            <h2 className="heading-lg mb-4">What Our Clients Say</h2>
+            <div className="divider-gold mb-6"></div>
+            <p className="body-lg max-w-2xl mx-auto">
+              Don't just take our word for it. Hear from our satisfied clients across Hyderabad.
             </p>
           </motion.div>
 
@@ -369,17 +282,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 bg-soft-gray rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300"
+                className="card-premium p-8"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                    <span key={i} className="text-gold text-lg">★</span>
                   ))}
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">{testimonial.text}</p>
+                <p className="body-md mb-6 italic">"{testimonial.text}"</p>
                 <div>
-                  <p className="font-bold text-dark-accent">{testimonial.name}</p>
-                  <p className="text-sm text-secondary-gray">{testimonial.role}</p>
+                  <p className="font-semibold text-dark-accent">{testimonial.name}</p>
+                  <p className="body-sm">{testimonial.role}</p>
                 </div>
               </motion.div>
             ))}
@@ -387,9 +300,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Timeline */}
-      <section className="py-16 md:py-24 bg-soft-gray">
-        <div className="container">
+      {/* Process Section */}
+      <section className="py-16 md:py-24 bg-light-gray">
+        <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -397,133 +310,76 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-accent">Our Process</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mb-4"></div>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-2">
-            {processSteps.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="bg-white p-6 rounded-lg text-center border border-gray-200 hover:shadow-lg transition-all duration-300">
-                  <div className="text-3xl font-bold text-gold mb-2">{item.step}</div>
-                  <h3 className="font-bold text-dark-accent mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
-                </div>
-                {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-0.5 bg-gold transform -translate-y-1/2"></div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Trending Searches - SEO Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-accent">Popular Interior Design Searches in Hyderabad</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mb-4"></div>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Find solutions for your interior design needs
+            <h2 className="heading-lg mb-4">Our Process</h2>
+            <div className="divider-gold mb-6"></div>
+            <p className="body-lg">
+              From consultation to installation, we ensure a seamless experience
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap gap-3 justify-center">
-            {trendingSearches.map((search, index) => (
+          <div className="space-y-6">
+            {[
+              { step: '1', title: 'Free Consultation', desc: 'Understand your vision, space, and requirements' },
+              { step: '2', title: '3D Design & Proposal', desc: 'Detailed 3D renderings and customized proposal' },
+              { step: '3', title: 'Material Selection', desc: 'Choose from premium materials and finishes' },
+              { step: '4', title: 'Professional Installation', desc: 'Expert installation with quality assurance' },
+              { step: '5', title: 'Handover & Support', desc: 'Final inspection, warranty, and after-sales support' },
+            ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
                 viewport={{ once: true }}
+                className="flex gap-6 p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-all"
               >
-                <a
-                  href="#"
-                  className="inline-block px-4 py-2 bg-soft-gray border border-gray-200 text-dark-accent rounded-full text-sm font-medium hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
-                >
-                  {search}
-                </a>
+                <div className="flex-shrink-0 w-12 h-12 bg-gold text-white rounded-full flex items-center justify-center font-bold text-lg">
+                  {item.step}
+                </div>
+                <div>
+                  <h3 className="heading-sm mb-1">{item.title}</h3>
+                  <p className="body-sm">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Popular Searches Section */}
+      <PopularSearches />
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-dark-accent text-white">
-        <div className="container text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Home?</h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Book your free consultation with Prime Nest Interiors today and let us create your dream home in Hyderabad.
-            </p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="container text-center max-w-2xl"
+        >
+          <h2 className="heading-lg text-white mb-6">Ready to Transform Your Space?</h2>
+          <p className="body-lg text-gray-300 mb-8">
+            Get your free consultation today and discover how we can create your dream interior.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://wa.me/919542663490?text=Hi%20Prime%20Nest%20Interiors,%20I%20would%20like%20to%20book%20a%20free%20consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-dark-accent rounded-lg font-semibold hover:bg-opacity-90 hover:shadow-lg transition-all duration-200 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-dark-accent rounded-lg font-semibold hover:opacity-90 transition-all duration-200 active:scale-95"
             >
-              Get Free Consultation <ArrowRight className="w-5 h-5" />
+              Chat on WhatsApp <ArrowRight className="w-5 h-5" />
             </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-soft-gray">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark-accent">Frequently Asked Questions</h2>
-            <div className="w-16 h-1 bg-gold mx-auto mb-4"></div>
-          </motion.div>
-
-          <div className="max-w-3xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-md transition-all duration-300"
-              >
-                <h3 className="font-bold text-dark-accent mb-3 flex items-start gap-3">
-                  <span className="text-gold font-bold">Q:</span>
-                  {faq.q}
-                </h3>
-                <p className="text-gray-600 ml-6">{faq.a}</p>
-              </motion.div>
-            ))}
+            <a
+              href="tel:+919542663490"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-dark-accent transition-all duration-200 active:scale-95"
+            >
+              Call Us Now
+            </a>
           </div>
-        </div>
+        </motion.div>
       </section>
-
-      <Footer />
     </div>
   );
 }

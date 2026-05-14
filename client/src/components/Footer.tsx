@@ -1,57 +1,48 @@
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { Link } from 'wouter';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-dark-accent text-white">
-      {/* Main Footer Content */}
-      <div className="container section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          {/* Brand Section */}
+      <div className="container py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12">
+          {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gold rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gold rounded-lg flex items-center justify-center">
                 <span className="text-dark-accent font-bold text-sm">PN</span>
               </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-lg">Prime Nest</span>
-                <span className="text-xs text-gray-400">Interiors</span>
-              </div>
+              <span className="font-bold text-lg">Prime Nest</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Premium interior design solutions for modern Hyderabad homes. Transform your space with our expert craftsmanship and innovative designs.
+              Premium interior design solutions for modern apartments in Hyderabad. Creating spaces that blend luxury with practicality.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold text-white">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/">
-                  <a className="text-gray-400 hover:text-gold transition-colors">Home</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/services">
-                  <a className="text-gray-400 hover:text-gold transition-colors">Services</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects">
-                  <a className="text-gray-400 hover:text-gold transition-colors">Projects</a>
+                  <span className="hover:text-gold transition-colors cursor-pointer">Home</span>
                 </Link>
               </li>
               <li>
                 <Link href="/about">
-                  <a className="text-gray-400 hover:text-gold transition-colors">About Us</a>
+                  <span className="hover:text-gold transition-colors cursor-pointer">About</span>
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="text-gray-400 hover:text-gold transition-colors">Contact</a>
+                <Link href="/services">
+                  <span className="hover:text-gold transition-colors cursor-pointer">Services</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/projects">
+                  <span className="hover:text-gold transition-colors cursor-pointer">Projects</span>
                 </Link>
               </li>
             </ul>
@@ -59,69 +50,87 @@ export default function Footer() {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Our Services</h3>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold text-white">Services</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <Link href="/modular-kitchens">
-                  <a className="text-gray-400 hover:text-gold transition-colors">Modular Kitchens</a>
+                  <span className="hover:text-gold transition-colors cursor-pointer">Modular Kitchens</span>
                 </Link>
               </li>
               <li>
                 <Link href="/wardrobes">
-                  <a className="text-gray-400 hover:text-gold transition-colors">Wardrobe Design</a>
+                  <span className="hover:text-gold transition-colors cursor-pointer">Wardrobes</span>
                 </Link>
               </li>
               <li>
                 <Link href="/tv-units">
-                  <a className="text-gray-400 hover:text-gold transition-colors">TV Units</a>
+                  <span className="hover:text-gold transition-colors cursor-pointer">TV Units</span>
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-gold transition-colors">Living Room Interiors</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-gold transition-colors">Full Home Interiors</a>
+                <Link href="/services">
+                  <span className="hover:text-gold transition-colors cursor-pointer">All Services</span>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contact Us</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-gray-400">+91 9542 663 490</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-gray-400">Hyderabad, India</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                <div>
-                  <p className="text-gray-400">Mon - Sat: 10 AM - 6 PM</p>
-                  <p className="text-gray-400">Sunday: Closed</p>
-                </div>
-              </div>
-            </div>
+            <h4 className="font-semibold text-white">Contact</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
+                <a href="tel:+919542663490" className="hover:text-gold transition-colors">
+                  +91 9542 663 490
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
+                <a href="mailto:info@primenestinteriors.com" className="hover:text-gold transition-colors">
+                  info@primenestinteriors.com
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
+                <span>Hyderabad, India</span>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="border-t border-gray-800 my-8"></div>
-
-        {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-          <p>&copy; {currentYear} Prime Nest Interiors. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gold transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-gold transition-colors">Sitemap</a>
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-gray-400">
+              © {currentYear} Prime Nest Interiors. All rights reserved.
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gold transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gold transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gold transition-colors"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

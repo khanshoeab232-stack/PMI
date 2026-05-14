@@ -24,13 +24,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/">
             <a className="flex items-center gap-2 group">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-gold to-gold/80 rounded-lg flex items-center justify-center shadow-sm">
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-gold rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm md:text-base">PN</span>
               </div>
-              <div className="hidden sm:flex flex-col">
-                <span className="font-bold text-lg md:text-xl text-dark-accent leading-tight">Prime Nest</span>
-                <span className="text-xs text-secondary-gray font-medium">Interiors</span>
-              </div>
+              <span className="font-bold text-lg md:text-xl text-dark-accent hidden sm:inline">Prime Nest</span>
             </a>
           </Link>
 
@@ -52,7 +49,7 @@ export default function Navbar() {
               href="https://wa.me/919542663490?text=Hi%20Prime%20Nest%20Interiors,%20I%20would%20like%20to%20book%20a%20free%20consultation"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-gold text-white rounded-md font-semibold hover:bg-opacity-90 hover:shadow-md transition-all duration-200 active:scale-95"
+              className="px-6 py-2.5 bg-gold text-white rounded-md font-semibold hover:bg-opacity-90 transition-all duration-200 active:scale-95"
             >
               Book Consultation
             </a>
