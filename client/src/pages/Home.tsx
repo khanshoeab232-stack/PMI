@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Home as HomeIcon, Zap, Award, Users } from 'lucide-react';
 import { Link } from 'wouter';
 import PopularSearches from '@/components/PopularSearches';
+import VideoTestimonials from '@/components/VideoTestimonials';
 
 export default function Home() {
   const services = [
@@ -266,6 +267,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Video Testimonials Section */}
+      <VideoTestimonials />
 
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-white">
