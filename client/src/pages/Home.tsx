@@ -223,8 +223,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="py-16 md:py-24 bg-dark-accent text-white">
+      {/* Our Commitment Section */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -233,24 +233,34 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="heading-lg text-white mb-4">Our Track Record</h2>
-            <p className="body-lg text-gray-300">
-              Trusted by hundreds of families and professionals in Hyderabad
+            <h2 className="heading-lg mb-4">Our Commitment</h2>
+            <div className="divider-gold mb-6"></div>
+            <p className="body-lg max-w-2xl mx-auto text-gray-600">
+              Focused on delivering premium interior experiences with quality, trust, and customer satisfaction.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: 'Premium Design Solutions', desc: 'Customized for every home' },
+              { title: 'End-to-End Support', desc: 'From consultation to installation' },
+              { title: 'Quality Craftsmanship', desc: 'Attention to detail in every project' },
+              { title: 'Customer Satisfaction', desc: 'Focused on service and long-term relationships' },
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                whileHover={{ y: -8 }}
+                className="card-premium p-6 text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-gold mb-2">{stat.number}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="heading-sm mb-3">{item.title}</h3>
+                <p className="body-sm text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
           </div>
