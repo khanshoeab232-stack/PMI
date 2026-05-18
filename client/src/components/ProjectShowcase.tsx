@@ -121,7 +121,7 @@ export default function ProjectShowcase() {
 
   const handleModalSwipe = (e: React.TouchEvent) => {
     const startX = e.changedTouches[0].screenX;
-    const endX = e.changedTouches?.[0]?.screenX || startX;
+    const endX = e.changedTouches[0]?.screenX || startX;
     
     if (startX - endX > 50) {
       handleModalNext();
