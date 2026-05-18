@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Home as HomeIcon, Zap, Award, Users } from 'lu
 import { Link } from 'wouter';
 import PopularSearches from '@/components/PopularSearches';
 import VideoTestimonials from '@/components/VideoTestimonials';
+import ProjectShowcase from '@/components/ProjectShowcase';
 
 export default function Home() {
   const services = [
@@ -270,6 +271,9 @@ export default function Home() {
 
       {/* Video Testimonials Section */}
       <VideoTestimonials />
+
+      {/* Project Showcase Section */}
+      <ProjectShowcase />
 
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-white">
