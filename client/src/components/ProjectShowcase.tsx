@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, MessageCircle } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -278,14 +278,27 @@ export default function ProjectShowcase() {
                 className="w-full h-auto max-h-[80vh] object-contain"
               />
 
-              {/* Info Overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h3 className="text-2xl font-bold text-white mb-1">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-amber-400 font-medium">
-                  {selectedProject.category}
-                </p>
+              {/* Info Overlay with Get a Quote Button */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-6">
+                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-1">
+                      {selectedProject.title}
+                    </h3>
+                    <p className="text-amber-400 font-medium">
+                      {selectedProject.category}
+                    </p>
+                  </div>
+                  <a
+                    href={`https://wa.me/919542663490?text=Hi%20Prime%20Nest%20Interiors,%20I%20am%20interested%20in%20the%20${selectedProject.title}%20project.%20Can%20you%20provide%20a%20quote%20for%20similar%20work?`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-amber-400 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg whitespace-nowrap"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    Get a Quote
+                  </a>
+                </div>
               </div>
             </div>
 
