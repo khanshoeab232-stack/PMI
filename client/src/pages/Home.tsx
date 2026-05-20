@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Home as HomeIcon, Zap, Award, Users } from 'lucide-react';
 import { Link } from 'wouter';
 import PopularSearches from '@/components/PopularSearches';
-import VideoTestimonials from '@/components/VideoTestimonials';
 import ProjectShowcase from '@/components/ProjectShowcase';
 
 export default function Home() {
@@ -268,9 +267,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Video Testimonials Section */}
-      <VideoTestimonials />
 
       {/* Project Showcase Section */}
       <ProjectShowcase />
