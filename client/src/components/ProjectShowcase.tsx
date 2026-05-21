@@ -83,7 +83,7 @@ export default function ProjectShowcase() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [autoPlay, setAutoPlay] = useState(true);
-  const autoPlayRef = useRef<NodeJS.Timeout>();
+  const autoPlayRef = useRef<NodeJS.Timeout | undefined>();
 
   // Auto-slide functionality
   useEffect(() => {
