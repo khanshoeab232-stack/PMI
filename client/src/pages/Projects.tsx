@@ -8,50 +8,90 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: 'Modern Living Room with Premium Entertainment',
-      category: 'living-room',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-premium-living-AEqYpDtXncAEA9TdeWApXx.webp',
-      description: '3BHK apartment with luxurious living room design',
+      title: 'Modern Bedroom',
+      category: 'bedroom',
+      image: '/manus-storage/modern bedroom_f4fb7fe8.webp',
+      description: 'Contemporary bedroom with modern furnishings and elegant design',
       location: 'Hyderabad'
     },
     {
       id: 2,
-      title: 'Contemporary Modular Kitchen',
+      title: 'L Type Modular Kitchen',
       category: 'kitchen',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-premium-5tiQTLo4SDZPs3T5swY5qE.webp',
-      description: 'Premium kitchen with marble countertops and gold accents',
+      image: '/manus-storage/L type modular kitchen_9993d51d.webp',
+      description: 'Modern L-shaped modular kitchen with sleek design and premium finishes',
       location: 'Hyderabad'
     },
     {
       id: 3,
-      title: 'Luxury Master Bedroom Wardrobe',
+      title: 'Modern Wardrobe Hinged Doors',
       category: 'wardrobe',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-luxury-5aWKRibTh8RUfTqUH8xVj9.webp',
-      description: 'Floor-to-ceiling wardrobe with mirror doors and LED lighting',
+      image: '/manus-storage/modern wardobe hinged doors_f2695572.webp',
+      description: 'Contemporary wardrobe with hinged door design and spacious storage',
       location: 'Hyderabad'
     },
     {
       id: 4,
-      title: 'Sophisticated TV Entertainment Unit',
+      title: 'Luxury TV Unit',
       category: 'tv-unit',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/tv-unit-modern-THa6SGHr7eRgtJPkn3C37g.webp',
-      description: 'Modern TV unit with textured accent wall and ambient lighting',
+      image: '/manus-storage/luxury TV unit_1a216d1c.webp',
+      description: 'Elegant luxury TV unit with premium finishes and sophisticated design',
       location: 'Hyderabad'
     },
     {
       id: 5,
-      title: 'Serene Master Bedroom',
-      category: 'bedroom',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/bedroom-interior-GVYpDfSF4TaPPnVU6uMKfQ.webp',
-      description: 'Luxurious bedroom with warm lighting and premium furnishings',
+      title: 'Open Modular Kitchen',
+      category: 'kitchen',
+      image: '/manus-storage/open modular kitchen_228dad42.webp',
+      description: 'Open concept modular kitchen with contemporary styling and functionality',
       location: 'Hyderabad'
     },
     {
       id: 6,
-      title: 'Complete 2BHK Interior Design',
-      category: 'full-home',
-      image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-premium-living-AEqYpDtXncAEA9TdeWApXx.webp',
-      description: 'Complete interior transformation of 2BHK apartment',
+      title: 'Luxury Full TV Unit',
+      category: 'tv-unit',
+      image: '/manus-storage/luxury full Tv unit_d9317494.webp',
+      description: 'Full-wall luxury TV unit with sophisticated design and ambient lighting',
+      location: 'Hyderabad'
+    },
+    {
+      id: 7,
+      title: 'Premium TV Unit',
+      category: 'tv-unit',
+      image: '/manus-storage/premium Tv Unit_4e4e9196.webp',
+      description: 'Premium TV unit with modern aesthetics and integrated storage',
+      location: 'Hyderabad'
+    },
+    {
+      id: 8,
+      title: 'PU Panel Luxury Wardrobes',
+      category: 'wardrobe',
+      image: '/manus-storage/pu panel luxury wardobes hinged doors_1794302d.webp',
+      description: 'Luxury wardrobe with PU panel and hinged doors for premium look',
+      location: 'Hyderabad'
+    },
+    {
+      id: 9,
+      title: 'Sliding Wardrobes',
+      category: 'wardrobe',
+      image: '/manus-storage/sliding wardobes_ab62ef48.webp',
+      description: 'Modern sliding wardrobe with sleek design and space-saving functionality',
+      location: 'Hyderabad'
+    },
+    {
+      id: 10,
+      title: 'Kids Bedroom',
+      category: 'bedroom',
+      image: '/manus-storage/kids bedroom_6b2a8d18.webp',
+      description: 'Vibrant and functional kids bedroom design with playful elements',
+      location: 'Hyderabad'
+    },
+    {
+      id: 11,
+      title: 'Prime Nest Kitchen',
+      category: 'kitchen',
+      image: '/manus-storage/primenest-kitchen.jpg_b8c1850c.webp',
+      description: 'Premium kitchen design from Prime Nest portfolio with premium finishes',
       location: 'Hyderabad'
     },
   ];
@@ -61,9 +101,7 @@ export default function Projects() {
     { id: 'kitchen', label: 'Kitchens' },
     { id: 'wardrobe', label: 'Wardrobes' },
     { id: 'tv-unit', label: 'TV Units' },
-    { id: 'living-room', label: 'Living Rooms' },
     { id: 'bedroom', label: 'Bedrooms' },
-    { id: 'full-home', label: 'Full Home' },
   ];
 
   const filteredProjects = activeFilter === 'all'
@@ -139,6 +177,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <h3 className="text-white font-bold text-lg mb-2">{project.title}</h3>

@@ -27,7 +27,7 @@ export default function Wardrobes() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-hero-SszToUGjbHzLbhyFFZkXZc.webp)',
+            backgroundImage: 'url(/manus-storage/modern wardobe hinged doors_f2695572.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
@@ -184,8 +184,8 @@ export default function Wardrobes() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-hero-SszToUGjbHzLbhyFFZkXZc.webp', title: 'Master Bedroom Wardrobe' },
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/wardrobe-hero-SszToUGjbHzLbhyFFZkXZc.webp', title: 'Modern Sliding Door Wardrobe' },
+              { img: '/manus-storage/modern wardobe hinged doors_f2695572.webp', title: 'Modern Wardrobe Hinged Doors' },
+              { img: '/manus-storage/sliding wardobes_ab62ef48.webp', title: 'Modern Sliding Door Wardrobe' },
             ].map((project, index) => (
               <motion.div
                 key={index}
@@ -201,6 +201,7 @@ export default function Wardrobes() {
                     src={project.img}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-end">
                     <div className="p-6 w-full">
@@ -209,7 +210,7 @@ export default function Wardrobes() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))}  
           </div>
         </div>
       </section>

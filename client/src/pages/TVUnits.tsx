@@ -27,7 +27,7 @@ export default function TVUnits() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/tv-unit-hero-k4TQq6BN327dQWVJAMdthY.webp)',
+            backgroundImage: 'url(/manus-storage/luxury TV unit_1a216d1c.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
@@ -184,8 +184,8 @@ export default function TVUnits() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/tv-unit-hero-k4TQq6BN327dQWVJAMdthY.webp', title: 'Modern Wall-Mounted Unit' },
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/tv-unit-hero-k4TQq6BN327dQWVJAMdthY.webp', title: 'Contemporary Entertainment Wall' },
+              { img: '/manus-storage/luxury TV unit_1a216d1c.webp', title: 'Modern Wall-Mounted Unit' },
+              { img: '/manus-storage/luxury full Tv unit_d9317494.webp', title: 'Contemporary Entertainment Wall' },
             ].map((project, index) => (
               <motion.div
                 key={index}
@@ -201,6 +201,7 @@ export default function TVUnits() {
                     src={project.img}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-end">
                     <div className="p-6 w-full">
@@ -209,7 +210,7 @@ export default function TVUnits() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))}  
           </div>
         </div>
       </section>

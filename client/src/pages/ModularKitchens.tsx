@@ -27,7 +27,7 @@ export default function ModularKitchens() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-hero-fVA6XDjV888HcQWG6MKm4e.webp)',
+            backgroundImage: 'url(/manus-storage/open modular kitchen_228dad42.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
@@ -184,8 +184,8 @@ export default function ModularKitchens() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-hero-fVA6XDjV888HcQWG6MKm4e.webp', title: 'Modern L-Shaped Kitchen' },
-              { img: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/modular-kitchen-hero-fVA6XDjV888HcQWG6MKm4e.webp', title: 'Contemporary Island Kitchen' },
+              { img: '/manus-storage/L type modular kitchen_9993d51d.webp', title: 'Modern L-Shaped Kitchen' },
+              { img: '/manus-storage/open modular kitchen_228dad42.webp', title: 'Contemporary Open Kitchen' },
             ].map((project, index) => (
               <motion.div
                 key={index}
@@ -201,6 +201,7 @@ export default function ModularKitchens() {
                     src={project.img}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-end">
                     <div className="p-6 w-full">

@@ -76,7 +76,7 @@ export default function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663030851542/MgcE2EwQn5YwVAvEt2DHn2/hero-premium-living-AEqYpDtXncAEA9TdeWApXx.webp)',
+            backgroundImage: 'url(/manus-storage/luxury full Tv unit_d9317494.webp)',
             backgroundAttachment: 'fixed',
           }}
         >
